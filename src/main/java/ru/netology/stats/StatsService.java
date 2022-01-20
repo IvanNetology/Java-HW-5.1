@@ -39,9 +39,10 @@ public class StatsService {
     }
 
     public int minAverage(int[] sales) {
+        int average = calculateAverage(sales);
         int month = 0;
         for (int sale : sales) {
-            if (sale < calculateAverage(sales)) {
+            if (sale < average) {
                 month = month + 1;
             }
         }
@@ -49,9 +50,10 @@ public class StatsService {
     }
 
     public int maxAverage(int[] sales) {
+        int average = calculateAverage(sales);
         int month = 0;
         for (int sale : sales) {
-            if (sale > calculateAverage(sales)) {
+            if (sale > average) {
                 month = month + 1;
             }
         }
